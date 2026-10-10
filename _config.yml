@@ -1,9 +1,10 @@
 title: New Stellar Media
 tagline: Stories That Inspire. Media That Matters.
 description: New Stellar Media is an independent digital media organization exploring modern storytelling, culture, and creative production.
-email: contact@newstellarmedia.com
+email: newstellarmedia@gmail.com
 baseurl: ""
-url: "https://www.newstellarmedia.com"
+domain: www.newstellarmedia.com
+url: "https://newstellarmedia.com"
 
 # Build settings
 markdown: kramdown
