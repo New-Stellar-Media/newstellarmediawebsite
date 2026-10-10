@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="post-article">
+  <div class="back-link-wrapper">
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to all posts</a>
+  </div>
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>

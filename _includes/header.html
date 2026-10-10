@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container header-container">
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      <span class="logo-dot"></span>
+      {{ site.title | escape }}
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <span class="hero-tag">New Stellar Media</span>
+  <h1 class="hero-title">Illuminating stories that shape our world.</h1>
+  <p class="hero-subtitle">
+    {{ site.description }}
+  </p>
+  <div class="hero-actions">
+    <a href="{{ '/about/' | relative_url }}" class="btn btn-primary">Our Mission</a>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
+  </div>
+</section>
+
+<section class="pillars-section">
+  <h2 class="section-title">What We Do</h2>
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <div class="pillar-icon">✦</div>
+      <h3 class="pillar-title">Independent Editorial</h3>
+      <p class="pillar-desc">Deep-dive journalism, commentary, and cultural essays covering technology, human stories, and the future.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">❖</div>
+      <h3 class="pillar-title">Digital Production</h3>
+      <p class="pillar-desc">High-impact audio, visual, and multimedia production designed for modern digital platforms.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">▲</div>
+      <h3 class="pillar-title">Community & Dialogue</h3>
+      <p class="pillar-desc">Convening creators, innovators, and thinkers through dispatches, events, and community conversations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="posts-section">
+  <h2 class="section-title">Latest Dispatches</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <h3 class="post-card-title">{{ post.title }}</h3>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+        </a>
+      </li>
+    {% else %}
+      <p class="empty-state">No dispatches published yet. Check back soon!</p>
+    {% endfor %}
+  </ul>
+</section>
